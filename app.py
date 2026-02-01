@@ -16,7 +16,7 @@ st.write(f"Update Terakhir: {datetime.now().strftime('%Y-%m-%d')}")
 # 1. Load Model dan Scaler
 @st.cache_resource # Agar tidak reload terus menerus
 def load_assets():
-    model = load_model('model_ihsg.h5')
+    model = load_model('model_ihsg.keras')
     scaler = joblib.load('scaler.pkl')
     return model, scaler
 
