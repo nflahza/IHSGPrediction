@@ -33,7 +33,7 @@ data.columns = data.columns.get_level_values(0) if isinstance(data.columns, pd.M
 
 # 4. Tampilkan Data Historis
 st.subheader("Data Historis Terbaru")
-st.line_chart(data['Close'].tail(100))
+st.line_chart(data['Close'].tail(100), width="content")
 
 # 5. Logika Prediksi Masa Depan
 if st.button("Jalankan Prediksi Masa Depan"):
