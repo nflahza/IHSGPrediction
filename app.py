@@ -32,8 +32,11 @@ data = yf.download(ticker, start="2023-01-01", end=datetime.now().strftime('%Y-%
 data.columns = data.columns.get_level_values(0) if isinstance(data.columns, pd.MultiIndex) else data.columns
 
 # 4. Tampilkan Data Historis
+tahun = 4
+HARI_DALAM_TAHUN = 365
+
 st.subheader("Data Historis Terbaru")
-st.line_chart(data['Close'].tail(100), width="content")
+st.line_chart(data['Close'].tail(HARI_DALAM_TAHUN*tahun), width="content")
 
 # 5. Logika Prediksi Masa Depan
 if st.button("Jalankan Prediksi Masa Depan"):
