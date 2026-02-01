@@ -36,7 +36,7 @@ tahun = 4
 HARI_DALAM_TAHUN = 365
 
 st.subheader("Data Historis Terbaru")
-st.line_chart(data['Close'].tail(HARI_DALAM_TAHUN*tahun), width="content")
+st.line_chart(data['Close'].tail(HARI_DALAM_TAHUN*tahun), color="##81c995", width="content")
 
 # 5. Logika Prediksi Masa Depan
 if st.button("Jalankan Prediksi Masa Depan"):
